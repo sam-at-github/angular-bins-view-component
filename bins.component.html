@@ -1,0 +1,20 @@
+<div [class.bins]="true"
+     [attr.data-min]="min"
+     [attr.data-max]="max"
+     (dragstart)="dragStart($event)"
+     (dragend)="dragEnd($event)"
+     >
+<span *ngFor="let bin of bins; let i=index"
+  [attr.data-index]="bin.index"
+  [attr.data-stat]="bin.stat"
+  [attr.data-ratio]="bin.stat / max"
+  [attr.title]="[bin.index, bin.stat, bin.toString()].join('|')"
+  [class.bin]="true"
+  [class.selected]="bin.index == selected"
+  [style.background-color]="hsl(bin.stat)"
+  (click)="clickBin($event)"
+  (focus)="focusBin($event)"
+  (blur)="blurBin($event)"
+>
+&nbsp;</span>
+</div>

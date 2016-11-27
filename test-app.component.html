@@ -1,0 +1,4 @@
+<div [class.app-container]="true">
+  <bins [hue]="240" (selection)="selected=$event"></bins>
+  <div *ngIf="selected">{{selected|json}}</div>
+</div>
