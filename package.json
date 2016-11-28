@@ -1,18 +1,16 @@
 {
   "name": "angular-bins-view-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple NG2 component creating a grid like view of some binned statistic.",
   "scripts": {
+    "prepublish": "tsc --declaration",
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
-    "docker-build": "docker build -t ng2-quickstart .",
-    "docker": "npm run docker-build && docker run -it --rm -p 3000:3000 -p 3001:3001 ng2-quickstart",
     "lint": "tslint ./app/**/*.ts -t verbose",
     "lite": "lite-server",
     "test": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
     "test-once": "tsc && karma start karma.conf.js --single-run",
     "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "webdriver:update": "webdriver-manager update"
+    "tsc:w": "tsc -w"
   },
   "keywords": [],
   "author": "",

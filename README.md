@@ -2,16 +2,16 @@
 
   [![NG2 Bind View Component](screen.png)](screen.png)
 
-This package provides a simple NG2 Component that presents a grid like view of some data that represents a binning of statistic over a dataset. Think [github activity grid](https://github.com/sam-at-github) but simpler and not necessarily datetime orientated.
+This package provides a very simple NG2 Component that presents a grid like view of some dataset that itself represents a binning of some statistic over some other dataset. Think [github activity grid](https://github.com/sam-at-github) but simpler and not necessarily datetime orientated.
 
   + The data you pass in has to be shaped or reshaped to be an array of `Bin`:
 
-      export interface Bin {
-        index: number;
-        stat: number;
-      }
+        export interface Bin {
+          index: number;
+          stat: number;
+        }
 
-  + The component has one Input/Output; selected(). A grid box is selected on click.
+  + The component has one Input/Output; `selected()`. A grid box is selected on click.
   + The package is actually includes a valid angular application which `npm start` starts.
   + You have to style it yourself.
 
